@@ -1,0 +1,22 @@
+---
+version: "2"
+
+linters:
+  enable:
+    - errcheck      # an unchecked error is the classic Go bug
+    - govet
+    - ineffassign
+    - staticcheck
+    - unused
+    - misspell
+    - revive
+    - bodyclose     # a leaked response body is a slow resource leak
+    - errorlint     # errors.As/Is over type assertions, which IsNotFound relies on
+
+formatters:
+  enable:
+    - gofmt
+
+issues:
+  max-issues-per-linter: 0
+  max-same-issues: 0
